@@ -75,7 +75,7 @@ public class MainFrame extends JFrame {
         About.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                javax.swing.JOptionPane.showMessageDialog(MainFrame.this, "");
+                javax.swing.JOptionPane.showMessageDialog(MainFrame.this, "This is the about page");
             }
         });
     }
