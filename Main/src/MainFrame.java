@@ -19,6 +19,8 @@ public class MainFrame extends JFrame {
     private JMenu Help;
     private JMenuItem About;
     private JMenuItem ResetEverything;
+    private JTabbedPane tabbedPane1;
+    private JScrollBar scrollBar1;
 
     public MainFrame(){
         setContentPane(mainPanel);
@@ -31,7 +33,7 @@ public class MainFrame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 String input = inputBox1.getText();
-                if (input.equals("CTF{2}")) { button1.setText("Correct"); inputBox1.setEnabled(false); };
+                if (input.equals("CTF{101}")) { button1.setText("Correct"); inputBox1.setEnabled(false); };
             }
         });
         button2.addActionListener(new ActionListener() {
