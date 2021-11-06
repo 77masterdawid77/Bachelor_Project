@@ -1,6 +1,6 @@
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
+import java.util.Arrays;
 
 public class MainFrame extends JFrame {
     private JButton button1;
@@ -21,11 +21,15 @@ public class MainFrame extends JFrame {
     private JMenuItem ResetEverything;
     private JTabbedPane tabbedPane1;
     private JScrollBar scrollBar1;
+    private JPanel EasyJPannel;
+    private JButton moveToHackableServersButton;
 
     public MainFrame(){
         setContentPane(mainPanel);
         setTitle("CTF Platform");
-        setSize(1000,600);
+        //setSize(1000,600);
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
+        //setUndecorated(true); //true fullscreen
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
 
@@ -78,6 +82,26 @@ public class MainFrame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 javax.swing.JOptionPane.showMessageDialog(MainFrame.this, "This is the about page");
+            }
+        });
+
+        scrollBar1.addMouseWheelListener(new MouseWheelListener() {
+            @Override
+            public void mouseWheelMoved(MouseWheelEvent mouseWheelEvent) {
+               // mouseWheelMoved();
+                }
+
+        });
+        moveToHackableServersButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+
+                HackableServerFrame j = new HackableServerFrame();
+                setContentPane(j.getContentPane());
+                setVisible(false);
+
+              //  HackableServerFrame page2 = new HackableServerFrame();
+              //  setContentPane(EasyJPannel);
             }
         });
     }
