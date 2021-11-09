@@ -95,12 +95,11 @@ public class MainFrame extends JFrame {
         moveToHackableServersButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-
-                HackableServerFrame j = new HackableServerFrame();
-                setContentPane(j.getContentPane());
                 setVisible(false);
+                HackableServerFrame page2 = new HackableServerFrame();
 
-              //  HackableServerFrame page2 = new HackableServerFrame();
+
+
               //  setContentPane(EasyJPannel);
             }
         });

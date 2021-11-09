@@ -1,9 +1,9 @@
 import javax.swing.*;
 
-public class HackableServerFrame extends JFrame {
-    private JTextField textField1;
-    private JTextArea textArea1;
-    private JTextArea textArea2;
+public class HackableServerFrame extends MainFrame {
+    private JTextField cUsersUserTextField;
+    private JTextArea CTFPlatformVersion0TextArea;
+    private JTextArea notesCanBeWrittenTextArea;
     private JPanel HackMainFrame;
 
 
@@ -16,4 +16,7 @@ public class HackableServerFrame extends JFrame {
         //setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
 
-}}
+}
+
+
+}
